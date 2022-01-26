@@ -13,7 +13,7 @@ import { fonts } from "../../res/fonts/index";
 import { useFonts } from "expo-font";
 import { IC_Search } from "../../res/images/Icon";
 import { colors } from "../../res/colors";
-import { IL_House_01, IL_House_02, IL_House_03 } from "../../res/images/Illustration";
+import { IL_House_01, IL_House_02, IL_House_03, IL_House_04, IL_House_05 } from "../../res/images/Illustration";
 
 const Home = () => {
   const [loaded] = useFonts({
@@ -49,11 +49,18 @@ const Home = () => {
         </View>
         <View>
         <ScrollView horizontal showsHorizontalScrollIndicator={false} style={{marginTop:30,paddingLeft:20,flexDirection:"row",paddingVertical:10}}>
-        <ListItems name="Modern house" city="Indore" image={IL_House_01}/>
-        <ListItems name="White House" city="Indore" image={IL_House_02}/>
-        <ListItems name="Wooden House" city="Indore" image={IL_House_03}/>
+        <ListItems type="main"  name="Modern house" city="Indore" image={IL_House_01}/>
+        <ListItems  type="main" name="White House" city="Indore" image={IL_House_02}/>
+        <ListItems  type="main" name="Wooden House" city="Indore" image={IL_House_03}/>
         
         </ScrollView>
+        </View>
+        {/**Recommended for you */}
+        <View style={{marginTop:30,paddingHorizontal:20}}>
+        <Text style={{fontSize:16,fontFamily:"SemiBold"}}>Recommended For You</Text>
+        <ListItems name="Wooden House" city="Indore" image={IL_House_04}/>
+        <ListItems name="Traingle House" city="Indore" image={IL_House_05}/>
+        <ListItems name="Cube House" city="Indore" image={IL_House_03}/>
         </View>
       </ScrollView>
     </SafeAreaView>
