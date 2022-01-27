@@ -14,6 +14,27 @@ const ListItems = ({ type, onPress, image, name, city }) => {
     return null;
   }
 
+  if(type=="house-facilities"){
+    return (
+      <View style={{backgroundColor:"white",height:110,width:100,borderRadius:20,marginRight:20, shadowColor: "#000",
+            shadowOffset: {
+              width: 0,
+              height: 1,
+            },
+            shadowOpacity: 0.22,
+            shadowRadius: 2.22,
+            
+            elevation: 3,}}> 
+      <Image source={image} style={{height:80,width:100,resizeMode:"stretch",borderTopLeftRadius:20,borderTopRightRadius:20}}/>
+
+      <View style={{justifyContent:"center",alignItems:"center",height:110-80}}>
+      <Text style={{fontSize:12,fontFamily:"Medium"}}>{name}</Text>
+      </View>
+      
+      </View>
+    )
+  }
+
   if(type== "main"){
 
     return (
