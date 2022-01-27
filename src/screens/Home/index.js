@@ -15,7 +15,7 @@ import { IC_Search } from "../../res/images/Icon";
 import { colors } from "../../res/colors";
 import { IL_House_01, IL_House_02, IL_House_03, IL_House_04, IL_House_05 } from "../../res/images/Illustration";
 
-const Home = () => {
+const Home = ({navigation}) => {
   const [loaded] = useFonts({
     SemiBold: require("../../../assets/fonts/Poppins-SemiBold.ttf"),
     Regular: require("../../../assets/fonts/Poppins-Regular.ttf"),
@@ -49,7 +49,7 @@ const Home = () => {
         </View>
         <View>
         <ScrollView horizontal showsHorizontalScrollIndicator={false} style={{marginTop:30,paddingLeft:20,flexDirection:"row",paddingVertical:10}}>
-        <ListItems type="main"  name="Modern house" city="Indore" image={IL_House_01}/>
+        <ListItems type="main" onPress={()=>navigation.navigate('Detail')}  name="Modern house" city="Indore" image={IL_House_01}/>
         <ListItems  type="main" name="White House" city="Indore" image={IL_House_02}/>
         <ListItems  type="main" name="Wooden House" city="Indore" image={IL_House_03}/>
         
@@ -58,7 +58,7 @@ const Home = () => {
         {/**Recommended for you */}
         <View style={{marginTop:30,paddingHorizontal:20}}>
         <Text style={{fontSize:16,fontFamily:"SemiBold"}}>Recommended For You</Text>
-        <ListItems name="Wooden House" city="Indore" image={IL_House_04}/>
+        <ListItems onPress={()=>navigation.navigate('Detail')} name="Wooden House" city="Indore" image={IL_House_04}/>
         <ListItems name="Traingle House" city="Indore" image={IL_House_05}/>
         <ListItems name="Cube House" city="Indore" image={IL_House_03}/>
         </View>

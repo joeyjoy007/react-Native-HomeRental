@@ -2,7 +2,7 @@ import { Image, StyleSheet, Text, TouchableOpacity, View } from "react-native";
 import React from "react";
 import colors from "../../../res/colors/index";
 import { useFonts } from "expo-font";
-import { IC_Star, IC_Star_Half } from "../../../res/images/Icon";
+import { IC_ArrowRightBlack, IC_Star, IC_Star_Half } from "../../../res/images/Icon";
 
 const ListItems = ({ type, onPress, image, name, city }) => {
   const [loaded] = useFonts({
@@ -69,6 +69,7 @@ const ListItems = ({ type, onPress, image, name, city }) => {
             <IC_Star />
             <IC_Star_Half />
           </View>
+          
           </View>
           
         </TouchableOpacity>
@@ -110,6 +111,9 @@ const ListItems = ({ type, onPress, image, name, city }) => {
     <IC_Star_Half/>
     </View>
     </View>
+    <TouchableOpacity>
+          <IC_ArrowRightBlack/>
+          </TouchableOpacity>
     </View>
     
     </TouchableOpacity>
